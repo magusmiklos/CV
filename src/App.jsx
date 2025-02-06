@@ -9,7 +9,7 @@ function App() {
           {/* Profile Picture */}
           <div className="relative w-64 h-64 rounded-full overflow-hidden mb-6 fancyborder shadow-lg">
             <img
-              src="/assets/prof.jpg"
+              src={import.meta.env.BASE_URL + "/assets/prof.jpg"}
               alt="Pfp"
               className="w-full h-full object-cover"
             />
