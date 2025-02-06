@@ -1,6 +1,5 @@
 import "./App.css";
 import Phone from "./templates/Phone";
-import Pfp from "/cv/src/assets/prof.jpg";
 function App() {
   return (
     <>
@@ -9,7 +8,11 @@ function App() {
         <div className="flex flex-col items-center bg-gradient-to-bl from-zinc-800 to-gray-800 text-white rounded-4xl p-10 h-fit md:mb-5 lg:m-0 m-3">
           {/* Profile Picture */}
           <div className="relative w-64 h-64 rounded-full overflow-hidden mb-6 fancyborder shadow-lg">
-            <img src={Pfp} alt="Pfp" className="w-full h-full object-cover" />
+            <img
+              src="/assets/prof.jpg"
+              alt="Pfp"
+              className="w-full h-full object-cover"
+            />
           </div>
 
           {/* Name and Introduction */}
