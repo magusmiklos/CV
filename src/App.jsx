@@ -10,8 +10,8 @@ function App() {
           {/* Profile Picture */}
           <div className="relative w-64 h-64 rounded-full overflow-hidden mb-6 fancyborder shadow-lg">
             <img
-              src="src/assets/prof.jpg"
-              alt="Your profile"
+              src="/cv/src/assets/prof.jpg"
+              alt="Pfp"
               className="w-full h-full object-cover"
             />
           </div>
