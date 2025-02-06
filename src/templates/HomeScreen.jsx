@@ -4,10 +4,10 @@ function HomeScreen({ setCurrentApp }) {
   const [currentTime, setCurrentTime] = useState("11:11");
 
   const apps = {
-    Projects: "src/assets/git.svg",
-    Contact: "src/assets/contact.svg",
-    AboutMe: "src/assets/insta.svg",
-    Resume: "src/assets/linkedin.svg",
+    Projects: "assets/git.svg",
+    Contact: "assets/contact.svg",
+    AboutMe: "assets/insta.svg",
+    Resume: "assets/linkedin.svg",
   };
 
   const handleClick = (id) => {
@@ -36,9 +36,18 @@ function HomeScreen({ setCurrentApp }) {
       <div className="flex flex-row justify-between align-middle mt-1">
         <div className="ml-1 font-bold">{currentTime}</div>
         <div className="flex flex-row">
-          <img src={"src/assets/signal.svg"} className="w-5 h-5 mr-1" />
-          <img src={"src/assets/wifi.svg"} className="w-5 h-5 mr-2" />
-          <img src={"src/assets/battery.svg"} className="w-5 h-5 mr-2" />
+          <img
+            src={import.meta.env.BASE_URL + "assets/signal.svg"}
+            className="w-5 h-5 mr-1"
+          />
+          <img
+            src={import.meta.env.BASE_URL + "assets/wifi.svg"}
+            className="w-5 h-5 mr-2"
+          />
+          <img
+            src={import.meta.env.BASE_URL + "assets/battery.svg"}
+            className="w-5 h-5 mr-2"
+          />
         </div>
       </div>
       <div className="grid grid-cols-4 gap-4 mt-5">
@@ -49,7 +58,11 @@ function HomeScreen({ setCurrentApp }) {
             className="flex flex-col items-center text-white cursor-pointer"
             onClick={() => handleClick(index + 1)}
           >
-            <img src={src} alt={name} className="w-16 h-16 mb-2 rounded-xl" />
+            <img
+              src={import.meta.env.BASE_URL + src}
+              alt={name}
+              className="w-16 h-16 mb-2 rounded-xl"
+            />
             <span>{name}</span>
           </div>
         ))}{" "}

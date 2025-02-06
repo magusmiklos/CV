@@ -8,13 +8,13 @@ function AboutMeScreen({ setCurrentApp }) {
       title: "Hiking",
       description:
         "In my free time, I enjoy hiking because being in nature brings me a sense of peace and calm. I often spend my weekends exploring different trails.",
-      image: "src/assets/hiking.jpeg",
+      image: "assets/hiking.jpeg",
     },
     {
       title: "GYM",
       description:
         "I go to the gym five times a week to maintain both my physical and mental fitness. After each workout, I feel a sense of clarity, and it helps me relieve stress.",
-      image: "src/assets/gym.jpeg",
+      image: "assets/gym.jpeg",
     },
   ];
 
@@ -57,7 +57,7 @@ function AboutMeScreen({ setCurrentApp }) {
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-full bg-gray-300 overflow-hidden">
                 <img
-                  src="src/assets/prof.jpg" // Use a profile picture
+                  src={import.meta.env.BASE_URL + "assets/prof.jpg"}
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
@@ -69,7 +69,7 @@ function AboutMeScreen({ setCurrentApp }) {
 
             {/* Post Image */}
             <img
-              src={post.image}
+              src={import.meta.env.BASE_URL + post.image}
               alt={post.title}
               className="w-full object-cover rounded-lg"
             />

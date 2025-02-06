@@ -21,7 +21,7 @@ function ContactScreen({ setCurrentApp }) {
       <div className="bg-slate-100 flex flex-row justify-between items-center rounded-full m-3 p-1">
         <div className="flex flex-row justify-center items-center">
           <img
-            src={"src/assets/back_black.svg"}
+            src={import.meta.env.BASE_URL + "assets/back_black.svg"}
             className="ml-1 w-7 h-7 cursor-pointer"
             onClick={handleBack}
           />
@@ -31,7 +31,7 @@ function ContactScreen({ setCurrentApp }) {
         </div>
         <div className="w-12 h-12 overflow-hidden rounded-full">
           <img
-            src={"src/assets/prof.jpg"}
+            src={import.meta.env.BASE_URL + "assets/prof.jpg"}
             className="h-full w-fill object-cover"
           />
         </div>
@@ -48,7 +48,10 @@ function ContactScreen({ setCurrentApp }) {
             <div className="flex flex-col justify-center items-start w-full">
               <div className="flex flex-row items-center justify-between w-full mb-1">
                 <div className="font-bold">{name}</div>
-                <img src={"src/assets/star.svg"} className="w-5 h-5 mr-2" />
+                <img
+                  src={import.meta.env.BASE_URL + "assets/star.svg"}
+                  className="w-5 h-5 mr-2"
+                />
               </div>
               <div className="text-wrap text-left">
                 {index === 2 ? (
@@ -76,7 +79,10 @@ function ContactScreen({ setCurrentApp }) {
             <div className="flex flex-col justify-center items-start w-full">
               <div className="flex flex-row items-center justify-between w-full mb-1">
                 <div className="bg-slate-200 w-20 h-5" />
-                <img src={"src/assets/star.svg"} className="w-5 h-5 mr-2" />
+                <img
+                  src={import.meta.env.BASE_URL + "assets/star.svg"}
+                  className="w-5 h-5 mr-2"
+                />
               </div>
               <div className="bg-slate-200 w-52 h-5" />
             </div>
@@ -90,7 +96,10 @@ function ContactScreen({ setCurrentApp }) {
           onClick={handleComposeClick}
           className="text-black bg-blue-200 rounded-xl p-4 cursor-pointer flex flex-row justify-center items-center"
         >
-          <img src={"src/assets/pen_black.svg"} className="w-5 h-5 mr-2" />
+          <img
+            src={import.meta.env.BASE_URL + "assets/pen_black.svg"}
+            className="w-5 h-5 mr-2"
+          />
           <p>Compose</p>
         </div>
       </div>

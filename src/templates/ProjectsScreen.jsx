@@ -8,20 +8,20 @@ function ProjectScreen({ setCurrentApp }) {
       title: "Django Social Network",
       description:
         "I developed a Twitter-like application using Django, featuring user registration and login functionality. After signing in, users can create posts visible to everyone, expand their network by adding friends, and enjoy various additional features. To ensure a responsive and dynamic user experience, I integrated Django Unicorn.",
-      image: "src/assets/socialapp.png",
+      image: "assets/socialapp.png",
       link: "https://github.com/magusmiklos/socialApp",
     },
     {
       title: "AI Story Generator",
       description:
         "I created an AI-powered story generator with a Flask backend and a React frontend. After authentication, users can generate stories, which are saved for future viewing. Each story is accompanied by generated illustrative artwork. Additionally, I fine-tuned the text generation model myself to enhance story creation.",
-      image: "src/assets/ai_app.png",
+      image: "assets/ai_app.png",
     },
     {
       title: "Godot Puzzle Game",
       description:
         "I developed a finite state automata-inspired game in Godot using GDScript. It's a platformer where players face limited movement and must navigate the environment by setting rules to control how their surroundings behave.",
-      image: "src/assets/game.png",
+      image: "assets/game.png",
       link: "https://magus1.itch.io/out-of-the-box",
     },
   ];
@@ -61,7 +61,7 @@ function ProjectScreen({ setCurrentApp }) {
           >
             {project.image && (
               <img
-                src={project.image}
+                src={import.meta.env.BASE_URL + project.image}
                 alt={project.title}
                 className="w-full object-cover rounded-lg border border-gray-600"
               />
